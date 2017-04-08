@@ -121,7 +121,7 @@ double* calcDesvio(Stats *info, int &contaMunicipios, int anos) {
 
 	}
 
-	//somatio para o desvio padrao
+	//desvio padrao
 
 	double *desvio = new double[anos];
 
@@ -134,7 +134,8 @@ double* calcDesvio(Stats *info, int &contaMunicipios, int anos) {
 	
 		}
 
-		desvio[jj] = sqrt(soma*(1/contaMunicipios));
+		desvio[jj] = sqrt(somatorio*(1.0/contaMunicipios));
+
 		somatorio = 0.0;
 
 	}

@@ -25,7 +25,7 @@ using std::ofstream;
 *@return	void
 */
 void imprimeEstatistica(int *big, int *small, double *avg, double *standardD, int anos) {
-	ofstream dadosSaida("estatisticas.csv");
+	ofstream dadosSaida("../data/estatisticas.csv");
 	for(int ii=0; ii<anos; ii++) {
 		dadosSaida << (1994 + ii) << ";" << big[ii] << ";" << small[ii] << ";" << avg[ii] << ";" << standardD[ii] << endl;
 	} 
@@ -39,7 +39,7 @@ void imprimeEstatistica(int *big, int *small, double *avg, double *standardD, in
 *@return	void
 */
 void imprimeTotais(int *tot, int anos){
-	ofstream dadosSaida("totais.dat"); 
+	ofstream dadosSaida("../data/totais.dat"); 
 	for(int ii=0; ii<anos; ii++) {
 		dadosSaida << (1994 + ii) << " " << tot[ii] << endl;
 	} 
