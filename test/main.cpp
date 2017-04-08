@@ -67,6 +67,7 @@ int main(int argc, char *argv[]) {
 		}
 		int totalLinha = 0;
 		entrada >> totalLinha;//elementos da ultima coluna
+
 		if(somaHorizontal != totalLinha) {
 			cout << "Inconsistencia entre dados e total no municipio: " << informacoes->nome << endl;
 		}
@@ -80,18 +81,22 @@ int main(int argc, char *argv[]) {
 	int somaVertical = 0;
 	string str1;
 	int totalH = 0;
-	while(count < contaMunicipios+1) {
+	//Pulando elementos iniciais da linha
+	getline(entrada, str1, ';');
+	while(count <= contaMunicipios+1) {
+
 		if(count == contaMunicipios+1) {
-			//Pulando elementos iniciais da linha
-			getline(entrada, str1, ';');
+			
 			//Pegando elementos da ultima linha
 			for(int i=0; i<21; i++) {
 				entrada >> totalH;
 				entrada.ignore();
+				
 				//somando informacoes das colunas
 				for(int k = 0; k<21; k++) {
 					for(int j=0; j<contaMunicipios; j++) {
 						somaVertical += informacoes->nascimentos[k];
+						cout << "test" << endl;
 					}
 					if(somaVertical != totalH) {
 						cout << "Inconsistencia entre dados e total no municipio: " <<(1994+k) << endl;
