@@ -10,6 +10,7 @@
 #ifndef CALCOPERACAOT1_H
 #define CALCOPERACAOT1_H
 
+#include "estruturaT1.h"
 #include "calcOperacoesT1.h"
 #include <math.h>
 
@@ -29,7 +30,7 @@ int* calcMaior(Stats *info, int &contaMunicipios, int anos);
 *@param		anos numero de anos
 *@return	menor numero de nascimentos em cada ano
 */
-int* calcMenor(int *info, int &contaMunicipios, int anos);
+int* calcMenor(Stats *info, int &contaMunicipios, int anos);
 
 /**
 *@brief		Funcao que determinar a media numero de nascimentos em cada ano
@@ -38,7 +39,7 @@ int* calcMenor(int *info, int &contaMunicipios, int anos);
 *@param		anos numero de anos
 *@return	media do numero de nascimentos em cada ano
 */
-double* calcMedia(int *info, int &contaMunicipios, int anos);
+double* calcMedia(Stats *info, int &contaMunicipios, int anos);
 
 /**
 *@brief		Funcao que determinar o desvio padrao do com relacao a media de
@@ -48,7 +49,7 @@ double* calcMedia(int *info, int &contaMunicipios, int anos);
 *@param		anos numero de anos
 *@return	desvio padrao de cada ano
 */
-double* calcDesvio(int *info, int &contaMunicipios, int anos);
+double* calcDesvio(Stats *info, int &contaMunicipios, int anos);
 
 /**
 *@brief		Funcao que determinar o total do numero de nascimentos em cada ano
@@ -57,6 +58,6 @@ double* calcDesvio(int *info, int &contaMunicipios, int anos);
 *@param		anos numero de anos
 *@return	total do numero de nascimentos em cada ano
 */
-int* calcTotal(int *info, int &contaMunicipios, int anos);
+int* calcTotal(Stats *info, int &contaMunicipios, int anos);
 
 #endif

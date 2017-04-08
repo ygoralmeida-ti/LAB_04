@@ -1,11 +1,14 @@
 /**
 *@file		imprimeT1.cpp
-*@brief		Arquivo de corpo contendo a implementacao de funcoes que geram
+*@brief		Arquivo de cabecalho contendo a definicao de funcoes que geram
 *			arquivos de saida
 *@author	Ygor Almeida(ygorgeofisico@gmail.com)
 *@since		08/04/2017
 *@date		08/04/2017
 */
+
+#ifndef IMPRIMET1_H
+#define IMPRIMET1_H
 
 #include <iostream>
 using std::endl;
@@ -24,24 +27,13 @@ using std::ofstream;
 *@param		anos numero de anos avaliados
 *@return	void
 */
-void imprimeEstatistica(int *big, int *small, double *avg, double *standardD, int anos) {
-	ofstream dadosSaida("estatisticas.csv");
-	for(int ii=0; ii<anos; ii++) {
-		dadosSaida << (1994 + ii) << ";" << big[ii] << ";" << small[ii] << ";" << avg[ii] << ";" << standardD[ii] << endl;
-	} 
-	
-}
-
+void imprimeEstatistica(int *big, int *small, double *avg, double *standardD, int anos);
 /**
 *@brief		Funcao que imprime dados do arquivo totais.csv
 *@param		*tot apontador para total
 *@param		anos numero de anos avaliados
 *@return	void
 */
-void imprimeTotais(int *tot, int anos){
-	ofstream dadosSaida("totais.dat"); 
-	for(int ii=0; ii<anos; ii++) {
-		dadosSaida << (1994 + ii) << " " << tot[ii] << endl;
-	} 
-	
-}
+void imprimeTotais(int *tot, int anos);
+
+#endif

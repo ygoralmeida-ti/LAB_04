@@ -7,6 +7,7 @@
 *@date		08/04/2017
 */
 
+#include "estruturaT1.h"
 #include "calcOperacoesT1.h"
 #include <math.h>
 
@@ -44,7 +45,7 @@ int* calcMaior(Stats *info, int &contaMunicipios, int anos) {
 *@param		anos numero de anos
 *@return	menor numero de nascimentos em cada ano
 */
-int* calcMenor(int *info, int &contaMunicipios, int anos) {
+int* calcMenor(Stats *info, int &contaMunicipios, int anos) {
 
 	int *min = new int[anos];//utiliando a heap
 
@@ -71,8 +72,8 @@ int* calcMenor(int *info, int &contaMunicipios, int anos) {
 *@param		anos numero de anos
 *@return	media do numero de nascimentos em cada ano
 */
-double* calcMedia(int *info, int &contaMunicipios, int anos) {
-	int *media = new int[anos];//utiliando a heap
+double* calcMedia(Stats *info, int &contaMunicipios, int anos) {
+	double *media = new double[anos];//utiliando a heap
 
 	double soma = 0.0;
 
@@ -100,9 +101,9 @@ double* calcMedia(int *info, int &contaMunicipios, int anos) {
 *@param		anos numero de anos
 *@return	desvio padrao de cada ano
 */
-double* calcDesvio(int *info, int &contaMunicipios, int anos) {
+double* calcDesvio(Stats *info, int &contaMunicipios, int anos) {
 
-	int media[anos];
+	double *media = new double[anos];
 
 	double soma = 0.0;
 
@@ -137,7 +138,7 @@ double* calcDesvio(int *info, int &contaMunicipios, int anos) {
 		somatorio = 0.0;
 
 	}
-
+	delete[] media;
 	return desvio;
 
 }
@@ -149,7 +150,7 @@ double* calcDesvio(int *info, int &contaMunicipios, int anos) {
 *@param		anos numero de anos
 *@return	total do numero de nascimentos em cada ano
 */
-int* calcTotal(int *info, int &contaMunicipios, int anos) {
+int* calcTotal(Stats *info, int &contaMunicipios, int anos) {
 	int *total = new int[anos];
 	int soma = 0;
 	for(int jj=0; jj<anos; jj++) {

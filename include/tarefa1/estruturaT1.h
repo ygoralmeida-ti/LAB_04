@@ -9,6 +9,9 @@
 #ifndef ESTRUTURA_H
 #define ESTRUTURA_H
 
+#include <string>
+using std::string;
+
 /**
 *@brief		Definindo struct Stats
 */

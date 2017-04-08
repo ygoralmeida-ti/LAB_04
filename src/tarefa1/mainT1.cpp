@@ -20,7 +20,8 @@ using std::string;
 using std::stoi;
 
 #include "estruturaT1.h"
-#include "calcOpercoesT1.h"
+#include "calcOperacoesT1.h"
+#include "imprimeT1.h"
 
 int main(int argc, char *argv[]) {
 
@@ -132,25 +133,25 @@ int main(int argc, char *argv[]) {
 
 	int *maior = new int[21];
 	int *menor = new int[21];
-	double *calcMedia = new double[21];
+	double *media = new double[21];
 	double *desvio = new double[21];
-	int *total = new int[21];
+	int *totalNascido = new int[21];
 
-	*maior = calcMaior(informacoes, contaMunicipios, 21);
-	*menor = calcMenor(informacoes, contaMunicipios, 21);
-	*calcMedia = calcMedia(informacoes, contaMunicipios, 21);
-	*desvio = calcDesvio(informacoes, contaMunicipios, 21);
-	*totalNascido = calcTotal(informacoes, contaMunicipios, 21);
+	maior = calcMaior(informacoes, contaMunicipios, 21);
+	menor = calcMenor(informacoes, contaMunicipios, 21);
+	media = calcMedia(informacoes, contaMunicipios, 21);
+	desvio = calcDesvio(informacoes, contaMunicipios, 21);
+	totalNascido = calcTotal(informacoes, contaMunicipios, 21);
 
-	imprimeEstatistica(maior, menor, calcMedia, desvio, 21);
+	imprimeEstatistica(maior, menor, media, desvio, 21);
 
 	imprimeTotais(totalNascido, 21);
 
 	delete[] maior;
 	delete[] menor;
-	delete[] calcMedia;
+	delete[] media;
 	delete[] desvio;
-	delete[] total;
+	delete[] totalNascido;
 	delete[] informacoes;
 	
 	return 0;		

@@ -32,7 +32,7 @@ debug: tarefa1
 
 # Alvo (target) para a construcao do executavel tarefa1
 # Define os arquivos mainT1.o como dependencias
-tarefa1: $(OBJ_DIR)/tarefa1/mainT1.o
+tarefa1: $(OBJ_DIR)/tarefa1/mainT1.o $(OBJ_DIR)/tarefa1/calcOperacoesT1.o $(OBJ_DIR)/tarefa1/imprimeT1.o
 	@echo "============="
 	@echo "Ligando o alvo $@"
 	@echo "============="
@@ -40,10 +40,19 @@ tarefa1: $(OBJ_DIR)/tarefa1/mainT1.o
 	@echo "+++ [Executavel tarefa1 criado em $(BIN_DIR)] +++"
 	@echo "============="
 
+# Alvo (target) para a construcao do objeto imprimeT1.o
+# Define o arquivo imprimeT1.cpp e imprimeT1.h como dependencias.
+$(OBJ_DIR)/tarefa1/imprimeT1.o: $(SRC_DIR)/tarefa1/imprimeT1.cpp $(INC_DIR01)/imprimeT1.h
+	$(CC) -c $(CFLAGS01) -o $@ $<
+
+# Alvo (target) para a construcao do objeto calcOperacoesT1.o
+# Define o arquivo calcOperacoesT1.cpp, calcOperacoesT1.h, estruturaT1.h como dependencias.
+$(OBJ_DIR)/tarefa1/calcOperacoesT1.o: $(SRC_DIR)/tarefa1/calcOperacoesT1.cpp $(INC_DIR01)/estruturaT1.h $(INC_DIR01)/calcOperacoesT1.h
+	$(CC) -c $(CFLAGS01) -o $@ $<
 
 # Alvo (target) para a construcao do objeto mainT1.o
-# Define o arquivo mainT1.cpp e estruturaT1.h como dependencias.
-$(OBJ_DIR)/tarefa1/mainT1.o: $(SRC_DIR)/tarefa1/mainT1.cpp $(INC_DIR01)/estruturaT1.h
+# Define o arquivo mainT1.cpp, estruturaT1.h, calcOperacoesT1.h e imprimeT1.h como dependencias.
+$(OBJ_DIR)/tarefa1/mainT1.o: $(SRC_DIR)/tarefa1/mainT1.cpp $(INC_DIR01)/estruturaT1.h $(INC_DIR01)/imprimeT1.h $(INC_DIR01)/calcOperacoesT1.h
 	$(CC) -c $(CFLAGS01) -o $@ $<
 
 
