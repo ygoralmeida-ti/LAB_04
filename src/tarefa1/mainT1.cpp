@@ -20,6 +20,7 @@ using std::string;
 using std::stoi;
 
 #include "estruturaT1.h"
+#include "calcOpercoesT1.h"
 
 int main(int argc, char *argv[]) {
 
@@ -140,6 +141,10 @@ int main(int argc, char *argv[]) {
 	*calcMedia = calcMedia(informacoes, contaMunicipios, 21);
 	*desvio = calcDesvio(informacoes, contaMunicipios, 21);
 	*totalNascido = calcTotal(informacoes, contaMunicipios, 21);
+
+	imprimeEstatistica(maior, menor, calcMedia, desvio, 21);
+
+	imprimeTotais(totalNascido, 21);
 
 	delete[] maior;
 	delete[] menor;
