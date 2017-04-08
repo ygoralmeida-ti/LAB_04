@@ -1,5 +1,5 @@
 /**
-*@file 		mainT1.cpp
+*@file 		mainT2.cpp
 *@brief		Programa principal para as tarefas do lab_04
 *@author	Ygor Almeida(ygorgeofisico@gmail.com)
 *@since		06/04/2017
@@ -19,9 +19,9 @@ using std::endl;
 using std::string;
 using std::stoi;
 
-#include "estruturaT1.h"
-#include "calcOperacoesT1.h"
-#include "imprimeT1.h"
+#include "estruturaT2.h"
+#include "calcOperacoesT2.h"
+#include "imprimeT2.h"
 
 int main(int argc, char *argv[]) {
 
