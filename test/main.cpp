@@ -20,7 +20,12 @@ using std::endl;
 #include <string>
 using std::string;
 
-#include "estrutura.h"
+struct Stats {
+	string codigo;
+	string nome;
+	int nascimentos[21];
+};
+
 
 int main(int argc, char *argv[]) {
 
@@ -48,23 +53,22 @@ int main(int argc, char *argv[]) {
 	getline(entrada, codigoMunicipio);//pula primeira linha do arquivo de dados
 	while(count < contaMunicipios) {
 
-		entrada >> informacoes.codigo;
+		entrada >> informacoes->codigo;
 
 		int somaHorizontal = 0;
 
-		getline(entrada, informacoes.nome, ";");
+		getline(entrada, informacoes->nome, ';');
 
-		for(int i=0; i<21, i++) {
-			entrada >> informacoes.nascimento[i];
-			entrada.ignore();
-			somaHorizontal += informacoes.nascimento[i];
+		for(int i=0; i<21; i++) {
+			entrada >> informacoes->nascimentos[i]; entrada.ignore();
+			somaHorizontal += informacoes->nascimentos[i];
 			
 
 		}
 		int totalLinha = 0;
 		entrada >> totalLinha;//elementos da ultima coluna
 		if(somaHorizontal != totalLinha) {
-			cout << "Inconsistencia entre dados e total no municipio: " << informacoes.nome << endl;
+			cout << "Inconsistencia entre dados e total no municipio: " << informacoes->nome << endl;
 		}
 		count++;
 		informacoes += 1;
@@ -73,37 +77,39 @@ int main(int argc, char *argv[]) {
 	
 	getline(entrada, codigoMunicipio);//pula primeira linha do arquivo de dados
 	count = 0;
-	somaVertical = 0;
-	string st1;
+	int somaVertical = 0;
+	string str1;
 	int totalH = 0;
 	while(count < contaMunicipios+1) {
 		if(count == contaMunicipios+1) {
 			//Pulando elementos iniciais da linha
-			getline(entrada, str1, ";");
+			getline(entrada, str1, ';');
 			//Pegando elementos da ultima linha
-			for(int i=0; i<21, i++) {
+			for(int i=0; i<21; i++) {
 				entrada >> totalH;
 				entrada.ignore();
 				//somando informacoes das colunas
-					for(int k = 0; k<21; k++) {
-						for(int j=0; j<contaMunicipios; j++) {
-							somaVertical += informacoes->nascimento[k];
-						}
-						if(somaVertical != totalH) {
-							cout << "Inconsistencia entre dados e total no municipio: " <<(1994+k) << endl;
-						}
-						somaVertical = 0;
-						informacoes +=1;
+				for(int k = 0; k<21; k++) {
+					for(int j=0; j<contaMunicipios; j++) {
+						somaVertical += informacoes->nascimentos[k];
 					}
+					if(somaVertical != totalH) {
+						cout << "Inconsistencia entre dados e total no municipio: " <<(1994+k) << endl;
+					}
+					somaVertical = 0;
+					informacoes +=1;
 				}
 			}
 		}
 		count++;
 	}
+		
+	cout << contaMunicipios << endl;;
+	entrada.close();
+	return 0;		
+}
 
 
 	
-	//cout << contaMunicipios << endl;;
-	entrada.close();
-	return 0;
-}
+	
+
