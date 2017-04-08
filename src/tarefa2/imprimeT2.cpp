@@ -8,6 +8,7 @@
 */
 
 #include <iostream>
+using std::cout;
 using std::endl;
 
 #include <fstream>
@@ -28,7 +29,9 @@ void imprimeEstatistica(int *big, int *small, double *avg, double *standardD, in
 	ofstream dadosSaida("../data/estatisticas.csv");
 	for(int ii=0; ii<anos; ii++) {
 		dadosSaida << (1994 + ii) << ";" << big[ii] << ";" << small[ii] << ";" << avg[ii] << ";" << standardD[ii] << endl;
-	} 
+	}
+
+	cout << "... Arquivo estatisticas.csv gerado" << endl;
 	
 }
 
@@ -42,6 +45,8 @@ void imprimeTotais(int *tot, int anos){
 	ofstream dadosSaida("../data/totais.dat"); 
 	for(int ii=0; ii<anos; ii++) {
 		dadosSaida << (1994 + ii) << " " << tot[ii] << endl;
-	} 
+	}
+
+	cout << "... Arquivo totais.dat gerado" << endl;
 	
 }

@@ -14,6 +14,7 @@ using std::cerr;
 using std::endl;
 using std::cout;
 using std::endl;
+using std::cin;
 
 #include <string>
 using std::string;
@@ -22,6 +23,7 @@ using std::stoi;
 #include "estruturaT2.h"
 #include "calcOperacoesT2.h"
 #include "imprimeT2.h"
+#include "calcTaxaT2.h"
 
 int main(int argc, char *argv[]) {
 
@@ -152,6 +154,17 @@ int main(int argc, char *argv[]) {
 	delete[] media;
 	delete[] desvio;
 	delete[] totalNascido;
+
+	int ano1, ano2;
+
+	cout << "Entre com os dois anos: ";
+	cin >> ano1;
+	cin >> ano2;
+
+	calcTaxaUp(informacoes, contaMunicipios, ano1, ano2, 21);
+
+	calcTaxaDown(informacoes, contaMunicipios, ano1, ano2, 21);
+	
 	delete[] informacoes;
 	
 	return 0;		

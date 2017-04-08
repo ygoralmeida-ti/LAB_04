@@ -11,12 +11,11 @@
 #define IMPRIMET2_H
 
 #include <iostream>
+using std::cout;
 using std::endl;
 
 #include <fstream>
 using std::ofstream;
-
-#include "imprimeT2.h"
 
 /**
 *@brief		Funcao que imprime dados do arquivo estatisticas.csv

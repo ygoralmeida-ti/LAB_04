@@ -11,7 +11,6 @@
 #define CALCOPERACAOT2_H
 
 #include "estruturaT2.h"
-#include "calcOperacoesT2.h"
 #include <math.h>
 
 /**
