@@ -157,13 +157,19 @@ int main(int argc, char *argv[]) {
 
 	int ano1, ano2;
 
-	cout << "Entre com os dois anos: ";
+	do {
+	cout << "Entre com os dois anos que deseja comparar: ";
 	cin >> ano1;
 	cin >> ano2;
 
-	calcTaxaUp(informacoes, contaMunicipios, ano1, ano2, 21);
+	if(ano1 < 1994 || ano1 > 2014 || ano2 < 1994 || ano2 > 2014 || ano1 == ano2) {
+		cout << "Digite valores de anos entre 1994 e 2014. Os dois valores nao podem ser iguais" << endl;
+	}
 
+	} while(ano1 < 1994 || ano1 > 2014 || ano2 < 1994 || ano2 > 2014 || ano1 == ano2);
 	calcTaxaDown(informacoes, contaMunicipios, ano1, ano2, 21);
+
+	calcTaxaUp(informacoes, contaMunicipios, ano1, ano2, 21);
 	
 	delete[] informacoes;
 	

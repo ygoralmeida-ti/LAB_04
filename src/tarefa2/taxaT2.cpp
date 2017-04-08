@@ -20,12 +20,12 @@
 */
 Retorno taxaDown(Stats *data, int &contaMunicipios, int &ano1, int &ano2, int &anos) {
 	Retorno voltando;
-	int escolhendoAno1 = ano1 - 1994 - 1;
-	int escolhendoAno2 = ano2 - 1994 - 1;
-	double taxaMenor = (data[0].nascidos[escolhendoAno2]*(1.0)/data[0].nascidos[escolhendoAno1]);
+	int escolhendoAno1 = ano1 - 1994;
+	int escolhendoAno2 = ano2 - 1994;
+	double taxaMenor = (data[0].nascimentos[escolhendoAno2]*(1.0)/data[0].nascimentos[escolhendoAno1]);
 	for(int ii=1; ii< contaMunicipios; ii++) {
 		
-		double taxa = (data[ii].nascidos[escolhendoAno2]*(1.0)/data[ii].nascidos[escolhendoAno1]);
+		double taxa = (data[ii].nascimentos[escolhendoAno2]*(1.0)/data[ii].nascimentos[escolhendoAno1]);
 		if(taxaMenor > taxa) {
 			taxaMenor = taxa;
 			voltando.municipio = data[ii].nome;
@@ -48,12 +48,12 @@ Retorno taxaDown(Stats *data, int &contaMunicipios, int &ano1, int &ano2, int &a
 */
 Retorno taxaUp(Stats *data, int &contaMunicipios, int &ano1, int &ano2, int &anos) {
 	Retorno voltando;
-	int escolhendoAno1 = ano1 - 1994 - 1;
-	int escolhendoAno2 = ano2 - 1994 - 1;
-	double taxaMaior = (data[0].nascidos[escolhendoAno2]*(1.0)/data[0].nascidos[escolhendoAno1]);
+	int escolhendoAno1 = ano1 - 1994;
+	int escolhendoAno2 = ano2 - 1994;
+	double taxaMaior = (data[0].nascimentos[escolhendoAno2]*(1.0)/data[0].nascimentos[escolhendoAno1]);
 	for(int ii=1; ii< contaMunicipios; ii++) {
 		
-		double taxa = (data[ii].nascidos[escolhendoAno2]*(1.0)/data[ii].nascidos[escolhendoAno1]);
+		double taxa = (data[ii].nascimentos[escolhendoAno2]*(1.0)/data[ii].nascimentos[escolhendoAno1]);
 		if(taxaMaior < taxa) {
 			taxaMaior = taxa;
 			voltando.municipio = data[ii].nome;

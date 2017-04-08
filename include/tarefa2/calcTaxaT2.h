@@ -11,6 +11,13 @@
 #ifndef CALCTAXAT2_H
 #define CALCTAXAT2_H
 
+#include <iostream>
+using std::cout;
+using std::endl;
+
+#include <iomanip>
+using std::setprecision;
+
 #include "estruturaT2.h"
 #include "taxaT2.h"
 

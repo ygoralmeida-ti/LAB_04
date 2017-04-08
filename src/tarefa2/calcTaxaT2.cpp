@@ -8,6 +8,13 @@
 *@date		08/04/2017		
 */
 
+#include <iostream>
+using std::cout;
+using std::endl;
+
+#include <iomanip>
+using std::setprecision;
+
 #include "calcTaxaT2.h"
 #include "estruturaT2.h"
 #include "taxaT2.h"
@@ -25,7 +32,7 @@
 */
 void calcTaxaDown(Stats *info, int &contaMunicipios, int &ano1, int &ano2, int anos) {
 	Retorno retornoMenor = taxaDown(info, contaMunicipios, ano1, ano2, anos);
-	cout << "Municipio com maior taxa de queda " << ano1 << "-" << ano2 << ": " << retornoMenor.Municipio << retornoMenor.taxa;
+	cout << "Municipio com maior taxa de queda " << ano1 << "-" << ano2 << ": " << retornoMenor.municipio << " " << "(" << setprecision(2) << retornoMenor.taxa <<"%)"<< endl;
 }
 
 /**
@@ -41,5 +48,5 @@ void calcTaxaDown(Stats *info, int &contaMunicipios, int &ano1, int &ano2, int a
 */
 void calcTaxaUp(Stats *info, int &contaMunicipios, int &ano1, int &ano2, int anos) {
 	Retorno retornoMaior = taxaUp(info, contaMunicipios, ano1, ano2, anos);
-	cout << "Municipio com maior taxa de crescimento " << ano1 << "-" << ano2 << ": " << retornoMaior.Municipio << retornoMaior.taxa;
+	cout << "Municipio com maior taxa de crescimento " << ano1 << "-" << ano2 << ": " << retornoMaior.municipio << " " << "(" << setprecision(2) << retornoMaior.taxa <<"%)"<< endl;
 }
