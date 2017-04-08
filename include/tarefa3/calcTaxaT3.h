@@ -1,12 +1,15 @@
 /**
-*@file 		calcTaxaT2.cpp
-*@brief		Arquivo de corpo contendo a implementacao de funcoes que passam
+*@file 		calcTaxaT3.cpp
+*@brief		Arquivo de cabecalho contendo a definicao de funcoes que passam
 *			parametros para outras funcoes, e apos o retorno dessas, exibem
 *			os resultados na tela
 *@author	Ygor Almeida(ygorgeofisico@gmail.com)
 *@since		08/04/2017
 *@date		08/04/2017		
 */
+
+#ifndef CALCTAXAT3_H
+#define CALCTAXAT3_H
 
 #include <iostream>
 using std::cout;
@@ -15,9 +18,8 @@ using std::endl;
 #include <iomanip>
 using std::setprecision;
 
-#include "calcTaxaT2.h"
-#include "estruturaT2.h"
-#include "taxaT2.h"
+#include "estruturaT3.h"
+#include "taxaT3.h"
 
 /**
 *@brief		Funcao que passa parametros para outra funcao realizar os processos
@@ -30,10 +32,7 @@ using std::setprecision;
 *@param     anos intervalo dos anos analisados
 *@return 	void
 */
-void calcTaxaDown(Stats *info, int &contaMunicipios, int &ano1, int &ano2, int anos) {
-	Retorno retornoMenor = taxaDown(info, contaMunicipios, ano1, ano2, anos);
-	cout << "Municipio com maior taxa de queda " << ano1 << "-" << ano2 << ": " << retornoMenor.municipio << " " << "(" << setprecision(4) << retornoMenor.taxa <<"%)"<< endl;
-}
+void calcTaxaDown(Stats *info, int &contaMunicipios, int &ano1, int &ano2, int anos);
 
 /**
 *@brief		Funcao que passa parametros para outra funcao realizar os processos
@@ -46,7 +45,6 @@ void calcTaxaDown(Stats *info, int &contaMunicipios, int &ano1, int &ano2, int a
 *@param     anos intervalo dos anos analisados
 *@return 	void
 */
-void calcTaxaUp(Stats *info, int &contaMunicipios, int &ano1, int &ano2, int anos) {
-	Retorno retornoMaior = taxaUp(info, contaMunicipios, ano1, ano2, anos);
-	cout << "Municipio com maior taxa de crescimento " << ano1 << "-" << ano2 << ": " << retornoMaior.municipio << " " << "(" << setprecision(5) << retornoMaior.taxa <<"%)"<< endl;
-}
+void calcTaxaUp(Stats *info, int &contaMunicipios, int &ano1, int &ano2, int anos);
+
+#endif

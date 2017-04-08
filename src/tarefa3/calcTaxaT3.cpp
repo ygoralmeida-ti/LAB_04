@@ -1,5 +1,5 @@
 /**
-*@file 		calcTaxaT2.cpp
+*@file 		calcTaxaT3.cpp
 *@brief		Arquivo de corpo contendo a implementacao de funcoes que passam
 *			parametros para outras funcoes, e apos o retorno dessas, exibem
 *			os resultados na tela
@@ -15,9 +15,9 @@ using std::endl;
 #include <iomanip>
 using std::setprecision;
 
-#include "calcTaxaT2.h"
-#include "estruturaT2.h"
-#include "taxaT2.h"
+#include "calcTaxaT3.h"
+#include "estruturaT3.h"
+#include "taxaT3.h"
 
 /**
 *@brief		Funcao que passa parametros para outra funcao realizar os processos
