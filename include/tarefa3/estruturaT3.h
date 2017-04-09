@@ -29,4 +29,11 @@ struct Retorno {
 	double taxa;
 };
 
+/**
+*@brief		Define struct para o caso extra
+*/
+struct Dados {
+	int quantidades[21];
+} 
+
 #endif

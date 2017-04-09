@@ -33,6 +33,16 @@ void imprimeEstatistica(int *big, int *small, double *avg, double *standardD, in
 *@param		anos numero de anos avaliados
 *@return	void
 */
+
 void imprimeTotais(int *tot, int anos);
+
+/**
+*@brief		Funcao que imprime dados do arquivo extra.dat
+*@param		selecao aponta para selec
+*@param		anos numero de anos avaliados
+*@param		contaA	numero de alvos
+*@return	void
+*/
+void imprimeDados(Dados* selecao,int anos, int contaA);
 
 #endif

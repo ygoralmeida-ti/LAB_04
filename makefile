@@ -58,6 +58,7 @@ $(OBJ_DIR)/tarefa1/mainT1.o: $(SRC_DIR)/tarefa1/mainT1.cpp $(INC_DIR01)/estrutur
 
 #=======================================================================================
 
+
 INC_DIR02=./include/tarefa2
 CFLAGS02 = -Wall -pedantic -ansi -std=c++11 -I. -I$(INC_DIR02)
 

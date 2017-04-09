@@ -24,6 +24,7 @@ using std::stoi;
 #include "calcOperacoesT3.h"
 #include "imprimeT3.h"
 #include "calcTaxaT3.h"
+#include "selecionaT3.h"
 
 int main(int argc, char *argv[]) {
 
@@ -167,10 +168,48 @@ int main(int argc, char *argv[]) {
 	}
 
 	} while(ano1 < 1994 || ano1 > 2014 || ano2 < 1994 || ano2 > 2014 || ano1 == ano2);
+
 	calcTaxaDown(informacoes, contaMunicipios, ano1, ano2, 21);
 
 	calcTaxaUp(informacoes, contaMunicipios, ano1, ano2, 21);
 	
+	//Parte extra
+
+	ifstream alvos("../data/alvos.dat");
+	if(!alvos) {
+		cerr << "O arquivo de alvos nao foi encontrado!" << endl;
+		return 0;
+	}
+
+	cout <<"... Lendo arquivo alvos.dat" << endl;
+
+	int contaAlvos = 0;
+	string codigoAlvos;
+	while(getline(alvos, codigoAlvos)) {
+		
+		contaAlvos++;
+		
+	}
+
+	cout << "......[" <<contaAlvos <<"] " << "municipios definidos como alvo" << endl;
+
+	alvos.clear();
+	alvos.seekg(alvos.beg);
+
+	int coletaAlvos = new int[contaAlvos];
+
+	for(int ii=0; ii<contaAlvos; ii++) {
+		alvos >> coletaAlvos[ii];
+	}
+
+	Dados *selec = new Dados[contaAlvos];
+
+	selec = selecionaDados(coletaAlvos, informacoes, contaAlvos, contaMunicipios, 21);
+
+	imprimeDados(selec, 21, contaAlvos);
+
+	delete[] selec;
+	delete[] coletaAlvos;
 	delete[] informacoes;
 	
 	return 0;		

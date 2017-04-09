@@ -50,3 +50,34 @@ void imprimeTotais(int *tot, int anos){
 	cout << "... Arquivo totais.dat gerado" << endl;
 	
 }
+
+/**
+*@brief		Funcao que imprime dados do arquivo extra.dat
+*@param		selecao aponta para selec
+*@param		anos numero de anos avaliados
+*@param		contaA	numero de alvos
+*@return	void
+*/
+void imprimeDados(Dados* selecao,int anos, int contaA) {
+	
+	int count = 0;
+	ofstream dadosSaida("../data/extra.dat");
+	
+	for(int jj=0; jj<contaA; j++) {
+		for(int ii=0; ii<anos; ii++) {
+
+			if(jj == 0) {
+				dadosSaida << (1994 + count++);
+			}
+
+			if(dadosSaida < conta-1) {
+				dadosSaida << " ";
+			}
+
+			dadosSaida << selecao[ii].quantidades[jj];
+
+		}
+
+		dadosSaida << endl;
+	}
+}
