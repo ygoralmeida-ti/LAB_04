@@ -14,11 +14,14 @@
 using std::cout;
 using std::endl;
 
+#include <string>
+using std::string;
+
 /**
 *@brief		Funcao que imprime na tela o nome do municipio selecionado
 *@param     nome string relacionada ao nome do municipio
 *@void
 */
-void imprimeMunicipio(string nome);}
+void imprimeMunicipio(string nome);
 
 #endif

@@ -21,6 +21,8 @@ using std::setprecision;
 #include "estruturaT3.h"
 #include "taxaT3.h"
 
+#include <string>
+
 /**
 *@brief		Funcao que passa parametros para outra funcao realizar os processos
 *			de avaliacao de taxas de crescimento. Apos o retorno dessa funcao,

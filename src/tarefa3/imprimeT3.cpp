@@ -15,6 +15,7 @@ using std::endl;
 using std::ofstream;
 
 #include "imprimeT3.h"
+#include "estruturaT3.h"
 
 /**
 *@brief		Funcao que imprime dados do arquivo estatisticas.csv
@@ -61,23 +62,28 @@ void imprimeTotais(int *tot, int anos){
 void imprimeDados(Dados* selecao,int anos, int contaA) {
 	
 	int count = 0;
+	int chk = 0;
 	ofstream dadosSaida("../data/extra.dat");
 	
-	for(int jj=0; jj<contaA; j++) {
-		for(int ii=0; ii<anos; ii++) {
+	for(int ii=0; ii<anos; ii++) {
+		for(int jj=0; jj<contaA; jj++) {
+		
 
-			if(jj == 0) {
-				dadosSaida << (1994 + count++);
-			}
+			if(chk == 0) {
+				dadosSaida << (1994 + count++) << " ";
+				chk = 1;
+			}			
+			//cout << selecao[jj].quantidades[ii] << endl;
+			//getchar();
+			dadosSaida << selecao[jj].quantidades[ii];
 
-			if(dadosSaida < conta-1) {
-				dadosSaida << " ";
-			}
-
-			dadosSaida << selecao[ii].quantidades[jj];
+			
+			dadosSaida << " ";
+			
 
 		}
 
 		dadosSaida << endl;
+		chk -= 1;
 	}
 }

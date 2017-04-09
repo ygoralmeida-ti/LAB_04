@@ -10,6 +10,9 @@
 using std::cout;
 using std::endl;
 
+#include <string>
+using std::string;
+
 #include "mostraTelaT3.h"
 
 /**

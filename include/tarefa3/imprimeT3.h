@@ -17,6 +17,8 @@ using std::endl;
 #include <fstream>
 using std::ofstream;
 
+#include "estruturaT3.h"
+
 /**
 *@brief		Funcao que imprime dados do arquivo estatisticas.csv
 *@param		*big apontador para maior

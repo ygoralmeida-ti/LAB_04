@@ -34,6 +34,6 @@ struct Retorno {
 */
 struct Dados {
 	int quantidades[21];
-} 
+};
 
 #endif

@@ -196,7 +196,7 @@ int main(int argc, char *argv[]) {
 	alvos.clear();
 	alvos.seekg(alvos.beg);
 
-	int coletaAlvos = new int[contaAlvos];
+	int *coletaAlvos = new int[contaAlvos];
 
 	for(int ii=0; ii<contaAlvos; ii++) {
 		alvos >> coletaAlvos[ii];

@@ -10,8 +10,8 @@
 #ifndef SELECIONAT3_H
 #define SELECIONAT3_H
 
-#include <cstdlib>
-using std::atoi;
+#include <string>
+using std::stoi;
 
 #include "selecionaT3.h"
 #include "estruturaT3.h"
@@ -26,6 +26,6 @@ using std::atoi;
 *@param     anos intervalo de tempo no qual a analise e feita
 *@return	dados selecionados a partir dos codigos dos municipios
 */
-Dados* selecionaDados(int* coletaA, Stats* info, int &contaAlvos, int &contaMunicipios, int anos);}
+Dados* selecionaDados(int* coletaA, Stats* info, int &contaAlvos, int &contaMunicipios, int anos);
 
 #endif

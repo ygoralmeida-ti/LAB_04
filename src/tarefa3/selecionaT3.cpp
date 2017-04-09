@@ -6,8 +6,13 @@
 *@since		08/04/2017
 *@date      08/04/2017	
 */
-#include <cstdlib>
-using std::atoi;
+
+#include <iostream>
+using std::cout;
+using std::endl;
+
+#include <string>
+using std::stoi;
 
 #include "selecionaT3.h"
 #include "estruturaT3.h"
@@ -24,18 +29,29 @@ using std::atoi;
 */
 Dados* selecionaDados(int* coletaA, Stats* info, int &contaAlvos, int &contaMunicipios, int anos) {
 	Dados *data = new Dados[contaAlvos];
+	int count = 0;
 	for(int ii=0; ii<contaAlvos; ii++) {
 		for(int jj=0; jj<contaMunicipios; jj++) {
-			int valor = atoi(info[jj].codigo);
+			
+			if(count == 0) {
+				info[jj].codigo.erase(info[jj].codigo.begin()+0);
+			}
+
+			//cout << info[jj].codigo << endl;
+			int valor = stoi(info[jj].codigo);
 			if(coletaA[ii] == valor) {
 				imprimeMunicipio(info[jj].nome);
 				for(int kk=0; kk<anos; kk++) {
 					data[ii].quantidades[kk] = info[jj].nascimentos[kk];
+					//cout << data[ii].quantidades[kk] << endl;
+					//getchar();
 				}
-				break;
+				
 			}
 			
+			
 		}
+		count++;
 	}
 	return data;
 }

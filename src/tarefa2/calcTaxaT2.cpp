@@ -32,7 +32,13 @@ using std::setprecision;
 */
 void calcTaxaDown(Stats *info, int &contaMunicipios, int &ano1, int &ano2, int anos) {
 	Retorno retornoMenor = taxaDown(info, contaMunicipios, ano1, ano2, anos);
-	cout << "Municipio com maior taxa de queda " << ano1 << "-" << ano2 << ": " << retornoMenor.municipio << " " << "(" << setprecision(4) << retornoMenor.taxa <<"%)"<< endl;
+	int tamanho = retornoMenor.municipio.size();
+	retornoMenor.municipio.erase(retornoMenor.municipio.begin()+(tamanho-1));
+	if(retornoMenor.taxa>0) {
+		cout << "Municipio com maior taxa de queda " << ano1 << "-" << ano2 << ": " << retornoMenor.municipio << " " << "(+" << setprecision(4) << retornoMenor.taxa <<"%)"<< endl;
+	} else {
+		cout << "Municipio com maior taxa de queda " << ano1 << "-" << ano2 << ": " << retornoMenor.municipio << " " << "(" << setprecision(4) << retornoMenor.taxa <<"%)"<< endl;
+	}	
 }
 
 /**
@@ -48,5 +54,11 @@ void calcTaxaDown(Stats *info, int &contaMunicipios, int &ano1, int &ano2, int a
 */
 void calcTaxaUp(Stats *info, int &contaMunicipios, int &ano1, int &ano2, int anos) {
 	Retorno retornoMaior = taxaUp(info, contaMunicipios, ano1, ano2, anos);
-	cout << "Municipio com maior taxa de crescimento " << ano1 << "-" << ano2 << ": " << retornoMaior.municipio << " " << "(" << setprecision(5) << retornoMaior.taxa <<"%)"<< endl;
+	int tamanho = retornoMaior.municipio.size();
+	retornoMaior.municipio.erase(retornoMaior.municipio.begin()+(tamanho-1));
+	if(retornoMaior.taxa > 0) {
+		cout << "Municipio com maior taxa de crescimento " << ano1 << "-" << ano2 << ": " << retornoMaior.municipio << " " << "(+" << setprecision(5) << retornoMaior.taxa <<"%)"<< endl;
+	} else {
+		cout << "Municipio com maior taxa de crescimento " << ano1 << "-" << ano2 << ": " << retornoMaior.municipio << " " << "(" << setprecision(5) << retornoMaior.taxa <<"%)"<< endl;
+	}
 }
