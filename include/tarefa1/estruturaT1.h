@@ -1,5 +1,5 @@
 /**
-*@file 		estruturaT1.cpp
+*@file 		estruturaT1.h
 *@brief		Definição do struct
 *@author	Ygor Almeida(ygorgeofisico@gmail.com)
 *@since		06/04/2017

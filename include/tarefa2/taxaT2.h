@@ -1,5 +1,5 @@
 /**
-*@file		taxaT2.cpp
+*@file		taxaT2.h
 *@brief		Arquivo contendo a implementacao de funcoes que calculam taxas
 *@author	Ygor Almeida(ygorgeofisico@gmail.com)
 *@since		08/04/2017

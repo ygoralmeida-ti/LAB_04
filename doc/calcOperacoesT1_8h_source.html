@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>[IMD0030 2017.1] Laboratório 4: Código-Fonte de include/tarefa1/calcOperacoesT1.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">[IMD0030 2017.1] Laboratório 4
+   </div>
+   <div id="projectbrief">Proposta de solução para as questões do Laboratório 4</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;Principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+      <li><a href="globals.html"><span>Membros&#160;dos&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_ad5759b797f82f191555df26dd5932b0.html">tarefa1</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">calcOperacoesT1.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="calcOperacoesT1_8h.html">Vá para a documentação deste arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef CALCOPERACAOT1_H</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define CALCOPERACAOT1_H</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="estruturaT1_8h.html">estruturaT1.h</a>&quot;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="calcOperacoesT1_8h.html">calcOperacoesT1.h</a>&quot;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">int</span>* <a class="code" href="calcOperacoesT1_8h.html#ae95951b06874854e60d58acbd5354f9b">calcMaior</a>(<a class="code" href="structStats.html">Stats</a> *info, <span class="keywordtype">int</span> &amp;contaMunicipios, <span class="keywordtype">int</span> anos);</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">int</span>* <a class="code" href="calcOperacoesT1_8h.html#a7e21088d44fe11caf8a6cbc7d2f49609">calcMenor</a>(<a class="code" href="structStats.html">Stats</a> *info, <span class="keywordtype">int</span> &amp;contaMunicipios, <span class="keywordtype">int</span> anos);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">double</span>* <a class="code" href="calcOperacoesT1_8h.html#a159078181a1ded1f6a95f96d2587a4b8">calcMedia</a>(<a class="code" href="structStats.html">Stats</a> *info, <span class="keywordtype">int</span> &amp;contaMunicipios, <span class="keywordtype">int</span> anos);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keywordtype">double</span>* <a class="code" href="calcOperacoesT1_8h.html#a53851cf6ab24e3ec55504f96901e7924">calcDesvio</a>(<a class="code" href="structStats.html">Stats</a> *info, <span class="keywordtype">int</span> &amp;contaMunicipios, <span class="keywordtype">int</span> anos);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">int</span>* <a class="code" href="calcOperacoesT1_8h.html#aee8f57ad42fdc186e8401a916af2f7ab">calcTotal</a>(<a class="code" href="structStats.html">Stats</a> *info, <span class="keywordtype">int</span> &amp;contaMunicipios, <span class="keywordtype">int</span> anos);</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="estruturaT1_8h_html"><div class="ttname"><a href="estruturaT1_8h.html">estruturaT1.h</a></div><div class="ttdoc">Definição do struct. </div></div>
+<div class="ttc" id="calcOperacoesT1_8h_html_a7e21088d44fe11caf8a6cbc7d2f49609"><div class="ttname"><a href="calcOperacoesT1_8h.html#a7e21088d44fe11caf8a6cbc7d2f49609">calcMenor</a></div><div class="ttdeci">int * calcMenor(Stats *info, int &amp;contaMunicipios, int anos)</div><div class="ttdoc">Funcao que determinar o menor numero de nascimentos em cada ano. </div><div class="ttdef"><b>Definition:</b> calcOperacoesT1.cpp:48</div></div>
+<div class="ttc" id="calcOperacoesT1_8h_html_a159078181a1ded1f6a95f96d2587a4b8"><div class="ttname"><a href="calcOperacoesT1_8h.html#a159078181a1ded1f6a95f96d2587a4b8">calcMedia</a></div><div class="ttdeci">double * calcMedia(Stats *info, int &amp;contaMunicipios, int anos)</div><div class="ttdoc">Funcao que determinar a media numero de nascimentos em cada ano. </div><div class="ttdef"><b>Definition:</b> calcOperacoesT1.cpp:75</div></div>
+<div class="ttc" id="calcOperacoesT1_8h_html_ae95951b06874854e60d58acbd5354f9b"><div class="ttname"><a href="calcOperacoesT1_8h.html#ae95951b06874854e60d58acbd5354f9b">calcMaior</a></div><div class="ttdeci">int * calcMaior(Stats *info, int &amp;contaMunicipios, int anos)</div><div class="ttdoc">Funcao que determinar o maior numero de nascimentos em cada ano. </div><div class="ttdef"><b>Definition:</b> calcOperacoesT1.cpp:21</div></div>
+<div class="ttc" id="calcOperacoesT1_8h_html"><div class="ttname"><a href="calcOperacoesT1_8h.html">calcOperacoesT1.h</a></div><div class="ttdoc">Arquivo de cabecalho contendo a definicao de funcoes para processar os dados do arquivo. </div></div>
+<div class="ttc" id="structStats_html"><div class="ttname"><a href="structStats.html">Stats</a></div><div class="ttdoc">Definindo struct Stats. </div><div class="ttdef"><b>Definition:</b> estruturaT1.h:18</div></div>
+<div class="ttc" id="calcOperacoesT1_8h_html_aee8f57ad42fdc186e8401a916af2f7ab"><div class="ttname"><a href="calcOperacoesT1_8h.html#aee8f57ad42fdc186e8401a916af2f7ab">calcTotal</a></div><div class="ttdeci">int * calcTotal(Stats *info, int &amp;contaMunicipios, int anos)</div><div class="ttdoc">Funcao que determinar o total do numero de nascimentos em cada ano. </div><div class="ttdef"><b>Definition:</b> calcOperacoesT1.cpp:154</div></div>
+<div class="ttc" id="calcOperacoesT1_8h_html_a53851cf6ab24e3ec55504f96901e7924"><div class="ttname"><a href="calcOperacoesT1_8h.html#a53851cf6ab24e3ec55504f96901e7924">calcDesvio</a></div><div class="ttdeci">double * calcDesvio(Stats *info, int &amp;contaMunicipios, int anos)</div><div class="ttdoc">Funcao que determinar o desvio padrao do com relacao a media de nascimentos de cada ano...</div><div class="ttdef"><b>Definition:</b> calcOperacoesT1.cpp:104</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

@@ -1,5 +1,5 @@
 /**
-*@file		imprimeT3.cpp
+*@file		imprimeT3.h
 *@brief		Arquivo de cabecalho contendo a definicao de funcoes que geram
 *			arquivos de saida
 *@author	Ygor Almeida(ygorgeofisico@gmail.com)

@@ -1,5 +1,5 @@
 /**
-*@file 		estruturaT2.cpp
+*@file 		estruturaT2.h
 *@brief		Definição dos structs usados
 *@author	Ygor Almeida(ygorgeofisico@gmail.com)
 *@since		06/04/2017

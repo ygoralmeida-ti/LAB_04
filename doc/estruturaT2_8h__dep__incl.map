@@ -1,0 +1,9 @@
+<map id="include/tarefa2/estruturaT2.h" name="include/tarefa2/estruturaT2.h">
+<area shape="rect" id="node2" href="$calcOperacoesT2_8h.html" title="Arquivo de cabecalho contendo a definicao de funcoes para processar os dados do arquivo. " alt="" coords="114,80,338,107"/>
+<area shape="rect" id="node3" href="$calcOperacoesT2_8cpp.html" title="Arquivo de corpo contendo a implementacao de funcoes para processar os dados do arquivo. " alt="" coords="5,155,180,196"/>
+<area shape="rect" id="node4" href="$mainT2_8cpp.html" title="Programa principal para as tarefas do lab_04. " alt="" coords="256,244,412,271"/>
+<area shape="rect" id="node5" href="$calcTaxaT2_8h.html" title="Arquivo de cabecalho contendo a definicao de funcoes que passam parametros para outras funcoes..." alt="" coords="372,162,563,189"/>
+<area shape="rect" id="node6" href="$calcTaxaT2_8cpp.html" title="Arquivo de corpo contendo a implementacao de funcoes que passam parametros para outras funcoes..." alt="" coords="510,244,691,271"/>
+<area shape="rect" id="node7" href="$taxaT2_8h.html" title="Arquivo contendo a implementacao de funcoes que calculam taxas. " alt="" coords="510,80,673,107"/>
+<area shape="rect" id="node8" href="$taxaT2_8cpp.html" title="Arquivo contendo a implementacao de funcoes que calculam taxas. " alt="" coords="639,162,792,189"/>
+</map>

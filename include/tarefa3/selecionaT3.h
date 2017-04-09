@@ -1,5 +1,5 @@
 /**
-*@file		selecionaT3.cpp
+*@file		selecionaT3.h
 *@brief		Arquivo de cabecalho contando a definicao de funcao que seleciona dados
 *			a partir do codigo dos municipios
 *@author	Ygor Almeida(ygorgeofisico@gmail.com)

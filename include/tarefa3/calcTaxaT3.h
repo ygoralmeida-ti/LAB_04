@@ -1,5 +1,5 @@
 /**
-*@file 		calcTaxaT3.cpp
+*@file 		calcTaxaT3.h
 *@brief		Arquivo de cabecalho contendo a definicao de funcoes que passam
 *			parametros para outras funcoes, e apos o retorno dessas, exibem
 *			os resultados na tela
