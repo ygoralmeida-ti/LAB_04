@@ -33,4 +33,13 @@ Retorno taxaDown(Stats *data, int &contaMunicipios, int &ano1, int &ano2, int &a
 */
 Retorno taxaUp(Stats *data, int &contaMunicipios, int &ano1, int &ano2, int &anos);
 
+/**
+*@brief		Funcao que determinar taxas de crescimento populacional
+*@param		*selection ponteiro que aponta para selec
+*@param		&anos passagem por referenca do intervalo analisado
+*@param     &contaAlvos passagem por referencia do numero de municipios
+*@return 	taxas de crescimento	
+*/
+Rate* processaTaxa(Dados* selection, int anos, int &contaAlvos);
+
 #endif

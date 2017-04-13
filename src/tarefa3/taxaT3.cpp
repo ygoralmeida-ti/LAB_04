@@ -8,6 +8,9 @@
 
 #include "taxaT3.h"
 #include "estruturaT3.h"
+#include <iostream>
+using std::cout;
+using std::endl;
 
 /**
 *@brief		Funcao que determinar a menor taxa de nascimento
@@ -62,5 +65,28 @@ Retorno taxaUp(Stats *data, int &contaMunicipios, int &ano1, int &ano2, int &ano
 	}
 
 	return voltando;
+
+}
+
+/**
+*@brief		Funcao que determinar taxas de crescimento populacional
+*@param		*selection ponteiro que aponta para selec
+*@param		&anos passagem por referenca do intervalo analisado
+*@param     &contaAlvos passagem por referencia do numero de municipios
+*@return 	taxas de crescimento	
+*/
+Rate* processaTaxa(Dados* selection, int anos, int &contaAlvos) {
+	
+	Rate *valores = new Rate[contaAlvos];
+	for(int jj = 0; jj<contaAlvos; jj++) {
+		//cout << "JJ: " << jj << endl;
+		for(int ii=0; ii<anos-1; ii++) {
+			//cout << selection[jj].quantidades[ii+1] << "/" << selection[jj].quantidades[ii] << " = " <<  selection[jj].quantidades[ii+1]*(1.0)/selection[jj].quantidades[ii] << endl;
+			valores[jj].taxa[ii] = 100*((selection[jj].quantidades[ii+1]*(1.0)/selection[jj].quantidades[ii])-1);
+			//cout << ii << endl;
+		}
+	}
+
+	return valores;
 
 }

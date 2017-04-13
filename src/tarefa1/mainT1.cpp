@@ -45,12 +45,12 @@ int main(int argc, char *argv[]) {
 	Stats *informacoes = new Stats[contaMunicipios];/**<alocacao dinamica para elementos do tipo Stats*/
 
 	int count = 0; /**<variavel de controle para leitura dos dados*/
-	string str2; /**<variavel para avaliar entradas dos valores*/
+	string str1; /**<variavel para avaliar entradas dos valores*/
 
 	entrada.clear();
 	entrada.seekg(entrada.beg);
 
-	int ii=0;
+	int ii=0; /**<variavel de controle para leitura dos dados*/
 
 	//letuira e armazenamento de dados e QC das linhas
 	getline(entrada, codigoMunicipio);//pula primeira linha do arquivo de dados
@@ -63,12 +63,12 @@ int main(int argc, char *argv[]) {
 		int somaHorizontal = 0;
 
 		for(int i=0; i<21; i++) {
-			getline(entrada, str2, ';');
+			getline(entrada, str1, ';');
 			
-			if(str2 == "-") {
-				str2 = "0";
+			if(str1 == "-") {
+				str1 = "0";
 			}
-			int avaliando = stoi(str2);		
+			int avaliando = stoi(str1);		
 						
 			informacoes[ii].nascimentos[i] = avaliando;
 								
@@ -76,7 +76,7 @@ int main(int argc, char *argv[]) {
 
 		}
 
-		int totalLinha = 0;
+		int totalLinha = 0; /**<total da soma das iformacoes na linha segundo a tabela*/
 		entrada >> totalLinha;//elementos da ultima coluna
 		
 		if(somaHorizontal != totalLinha) {
@@ -96,21 +96,21 @@ int main(int argc, char *argv[]) {
 
 	getline(entrada, codigoMunicipio);//pula primeira linha do arquivo de dados
 	count = 0;
-	int somaVertical = 0;
-	string str1;
-	int totalH = 0;
+	int somaVertical = 0; /**<soma dos valores na coluna*/
+	string str2; /**<variavel para avaliar entradas dos valores*/
+	int totalV = 0; /**<total da soma das iformacoes na coluna segundo a tabela*/
 
 	while(count < (contaMunicipios+2)) {		
 		
 		if(count == contaMunicipios) {
 			
 			//Pulando elementos iniciais da linha
-			getline(entrada, str1, ';');
+			getline(entrada, str2, ';');
 			
 			//Pegando elementos da ultima linha
 			for(int i=0; i<21; i++) {
-				getline(entrada, str1, ';');
-				totalH = stoi(str1);
+				getline(entrada, str2, ';');
+				totalV = stoi(str2);
 				
 				for(int j=0; j<contaMunicipios; j++) {
 					
@@ -118,7 +118,7 @@ int main(int argc, char *argv[]) {
 				
 				}
 				
-				if(somaVertical != totalH) {
+				if(somaVertical != totalV) {
 					cout << "Inconsistencia entre dados e total no municipio: " <<(1994+i) << endl;
 					return 0;
 				}

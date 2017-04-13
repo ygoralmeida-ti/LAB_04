@@ -30,10 +30,17 @@ struct Retorno {
 };
 
 /**
-*@brief		Define struct para o caso extra
+*@brief		Define struct para a selecao de dados do caso extra
 */
 struct Dados {
 	int quantidades[21];
+};
+
+/**
+*@brief		Define struct para as taxas do caso extra
+*/
+struct Rate {
+	double taxa[20];
 };
 
 #endif

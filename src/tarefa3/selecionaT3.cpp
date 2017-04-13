@@ -31,20 +31,19 @@ Dados* selecionaDados(int* coletaA, Stats* info, int &contaAlvos, int &contaMuni
 	Dados *data = new Dados[contaAlvos];
 	int count = 0;
 	for(int ii=0; ii<contaAlvos; ii++) {
+		//cout << "II: " << ii << endl;
 		for(int jj=0; jj<contaMunicipios; jj++) {
 			
 			if(count == 0) {
 				info[jj].codigo.erase(info[jj].codigo.begin()+0);
 			}
 
-			//cout << info[jj].codigo << endl;
 			int valor = stoi(info[jj].codigo);
 			if(coletaA[ii] == valor) {
 				imprimeMunicipio(info[jj].nome);
 				for(int kk=0; kk<anos; kk++) {
 					data[ii].quantidades[kk] = info[jj].nascimentos[kk];
-					//cout << data[ii].quantidades[kk] << endl;
-					//getchar();
+					
 				}
 				
 			}

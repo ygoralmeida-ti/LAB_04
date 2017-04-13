@@ -13,6 +13,7 @@
 #include <iostream>
 using std::cout;
 using std::endl;
+using std::cerr;
 
 #include <fstream>
 using std::ofstream;
@@ -45,6 +46,6 @@ void imprimeTotais(int *tot, int anos);
 *@param		contaA	numero de alvos
 *@return	void
 */
-void imprimeDados(Dados* selecao,int anos, int contaA);
+void imprimeDados(Rate* selecao,int anos, int contaA);
 
 #endif

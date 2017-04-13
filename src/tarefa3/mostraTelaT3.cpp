@@ -21,5 +21,7 @@ using std::string;
 *@void
 */
 void imprimeMunicipio(string nome) {
+	int tamanho = nome.size();
+	nome.erase(nome.begin()+(tamanho-1));
 	cout << "......{ " << nome << " }" << endl;
 }

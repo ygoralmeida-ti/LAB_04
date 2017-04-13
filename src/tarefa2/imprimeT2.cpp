@@ -10,6 +10,7 @@
 #include <iostream>
 using std::cout;
 using std::endl;
+using std::cerr;
 
 #include <fstream>
 using std::ofstream;
@@ -27,11 +28,16 @@ using std::ofstream;
 */
 void imprimeEstatistica(int *big, int *small, double *avg, double *standardD, int anos) {
 	ofstream dadosSaida("../data/estatisticas.csv");
+	if(!dadosSaida) {
+		cerr << "Arquivo de saída não encontrado." << endl;
+		exit(1);
+	}
 	for(int ii=0; ii<anos; ii++) {
 		dadosSaida << (1994 + ii) << ";" << big[ii] << ";" << small[ii] << ";" << avg[ii] << ";" << standardD[ii] << endl;
 	}
 
 	cout << "... Arquivo estatisticas.csv gerado" << endl;
+	dadosSaida.close();
 	
 }
 
@@ -42,11 +48,16 @@ void imprimeEstatistica(int *big, int *small, double *avg, double *standardD, in
 *@return	void
 */
 void imprimeTotais(int *tot, int anos){
-	ofstream dadosSaida("../data/totais.dat"); 
+	ofstream dadosSaida("../data/totais.dat");
+	if(!dadosSaida) {
+		cerr << "Arquivo de saída não encontrado." << endl;
+		exit(1);
+	}
 	for(int ii=0; ii<anos; ii++) {
 		dadosSaida << (1994 + ii) << " " << tot[ii] << endl;
 	}
 
 	cout << "... Arquivo totais.dat gerado" << endl;
+	dadosSaida.close();
 	
 }
